@@ -6,5 +6,5 @@ export default function Home() {
   useEffect(() => {
     router.push("/spaccing");
   }, []);
-  return <div>hallo</div>;
+  return;
 }

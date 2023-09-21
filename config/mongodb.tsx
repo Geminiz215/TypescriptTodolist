@@ -2,11 +2,8 @@
 import mongoose from "mongoose";
 import * as dotenv from "dotenv";
 
-dotenv.config(); // Loads environment variables from .env
-
-// Access environment variables
-
 const connectDB = async () => {
+  dotenv.config();
   let connectionUrl: string;
   const databaseName = process.env.DATABASE_NAME;
   const databaseUrl = process.env.DATABASE_URL;
