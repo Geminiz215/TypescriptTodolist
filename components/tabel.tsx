@@ -104,7 +104,7 @@ const Tabel = () => {
           </div>
         </div>
       </div>
-      <table className="table-fixed border-separate  border border-spacing-2 border-slate-500 min-w-fit my-5">
+      <table className="table-fixed border-separate  border border-spacing-2 border-slate-500 min-w-fit my-5 ">
         <caption className="caption-bottom">Table : Todo list</caption>
         <thead>
           <tr className="odd:bg-white even:bg-slate-50">
@@ -119,21 +119,21 @@ const Tabel = () => {
         </thead>
         <tbody>
           {data.map((item: dataInput) => (
-            <tr key={item._id}>
+            <tr key={item._id} className="hover:bg-gray-100">
               <td className="text-sm hover:border-b-2">{item.name}</td>
-              <td className="text-sm ">{item.todo}</td>
-              <td className="text-sm ">{item.description}</td>
+              <td className="text-sm hover:border-b-2">{item.todo}</td>
+              <td className="text-sm hover:border-b-2">{item.description}</td>
               {item.startDate === null ? (
                 <td></td>
               ) : (
-                <td className="text-sm ">
+                <td className="text-sm hover:border-b-2">
                   {item.startDate ? formatDate(item.startDate) : " "}
                 </td>
               )}
               {item.endDate === null ? (
                 <td></td>
               ) : (
-                <td className="text-sm ">
+                <td className="text-sm hover:border-b-2">
                   {item.endDate ? formatDate(item.endDate) : " "}
                 </td>
               )}
